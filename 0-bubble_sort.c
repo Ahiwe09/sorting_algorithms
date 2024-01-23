@@ -9,7 +9,7 @@
  */
 void bubble_sort(int *array, size_t size)
 {
-	size_t n;
+	size_t k;
 	int tmp, sort = 0;
 
 	if (array == NULL || size == 0)
@@ -17,14 +17,14 @@ void bubble_sort(int *array, size_t size)
 	while (sort == 0)
 	{
 		sort = 1;
-		for (n = 0; n < size - 1; n++)
+		for (k = 0; k < size - 1; k++)
 		{
-			if (array[n] > array[n + 1])
+			if (array[n] > array[k + 1])
 			{
 				sort = 0;
-				tmp = array[n];
-				array[n] = array[n + 1];
-				array[n + 1] = tmp;
+				tmp = array[k];
+				array[k] = array[k + 1];
+				array[k + 1] = tmp;
 				print_array(array, size);
 			}
 		}
